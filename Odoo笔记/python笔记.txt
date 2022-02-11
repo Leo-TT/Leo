@@ -1,0 +1,82 @@
+python3:
+
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+input('Enter an integer: ')
+print()   end指定以什么为结束      #注释    ''' 多行字符串
+
+str.format()         字符串内含变量，用{0}指定参数，（）内放变量
+                           '{0:.3f}'.format(1.0/3)          保留3个小数
+                           '{0:_^11}'.format('hello')     _填充
+str.startswith('a')
+str.find('a')
+str.join(list)         不是加入，是连结起来，以str连结了list表里面的元素
+str.lower()
+str.upper()
+str.puctuation     字符串中的标点符号
+str.replace()        替换
+ord(a)   a的asicc码
+chr(65)  65对应的字符
+
+
+len(str)                返回长度
+max(1,2,3)
+dir()                    返回模块名称列表
+
+__doc__               文档字符串
+\  转义字符   添加新行          r反转义
+
+if a==b:
+elif a<b:
+else:
+
+while a<b:
+else:
+
+for i in range(1,5):        #range最后一个数不包含,第3个参数为步长
+else:                              #在循环结束后执行
+
+
+函数：
+def  hello(a,b=1):          关键字参数，通过使用关键字而非位置来实现
+def total(a=5, *numbers, **phonebook):     可变参数，元组，字典
+global 定义全局变量
+
+模块：
+if __name__ == '__main__':
+import 其他以.py结束的文件
+
+list.append()
+list.sort()
+
+列表 元组 字典 集合   a=b浅复制 a=b[:]深复制
+
+类的所属变量称字段，函数称方法，他们是类的属性
+class A:
+     def	say_hi(self)          第一个参数必须是self
+     __init__(self,name):         对象被创建时先初始化，可以在这里赋值
+
+类变量与对象变量的区别	类变量共享，对象变量不共享，属于对象，对象变量在__init__里面定义
+类成员都是公开的 	__privatevar来定义私有
+继承 Class A(B,C): A类继承B类C类
+
+
+文件：
+f = open('poem.txt','w')
+f.write(poem)
+f.close()
+f.readline()
+
+io.open  utf-8
+pickle模块 持久化  pickle.dump（list, file) #转存   pickle.load(f) #载入
+
+异常：
+try：   
+     if raise 异常
+except 自定义exception as ex: 
+finally:
+
+with open("poem.txt") as f:     异常的另一种写法
+
+标准库模块    python2与3的不同

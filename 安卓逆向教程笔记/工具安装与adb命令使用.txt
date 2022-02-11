@@ -1,0 +1,27 @@
+JDK/SDK/NDK 
+eclpise集成工具包/Android Studio
+Androidkiller/JEB/Android逆向助手/jadx 
+IDA/GDB/GDA
+apkhe1per(查看 APK 大概信息)/getsign(获取安装包签名hash值)/APK上上签
+模拟器(逍遥/海马玩/夜神/蓝叠/天天)
+幸运破解器(破解安卓核心)/MT管理器/RE管理器/钛备份
+
+
+Android操作系统 Linux内核
+学习adb的使用
+常见的Linux命令操作
+常用命令
+adb devices
+adb -s 		指定设备 shell
+adb shell 	进入手机管理
+adb install 安装包文件
+adb push 	电脑端文件 手机端文件路径
+adb pull 	手机端文件路径 电脑端文件路径
+chmod 777 	指定要给权限的文件或文件夹
+cd 		进入目录
+cat 	查看文件内容
+id 		获取当前用户信息
+ps 		查看当前系统所有进程
+kill 	杀进程 kill 进程id
+ls 		列出当前文件夹下的文件
+mkdir 	创建文件夹

@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+
+#模型笔记：导入模型字段和api
+from odoo import models, fields, api
+#继承odoo的模型，类名TodoTask对Odoo模块无意义，_name才是标识符
+class TodoTask(models.Model):
+    _name = 'todo.task'
+    _description = 'To-do Task'
+    #写法注意，通过fields来定义字段类型的
+    name = fields.Char('Description', required=True)
+    is_done = fields.Boolean('Done?')
+    active = fields.Boolean('Active?', default=True)
+
+
+
+#视图笔记：
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_todo_task" model="ir.ui.view">
+        <field name="name">To-do Task Form</field>
+        #指定模型，todo.task是上面模型_name对应的
+        <field name="model">todo.task</field>
+        #表单在这个arch下面，重要！表单有三种
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="do_toggle_done" type="object" string="Toggle Done" class="oe_highlight" />
+                    <button name="do_clear_done" type="object" string="Clear All Done" />
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                        </group>
+                       <group name="group_right">
+                            <field name="is_done"/>
+                            <field name="active" readonly="1" />
+                       </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+
+
+#继承笔记,虽然名字相同，但并不影响
+class TodoTask(models.Model):
+    _inherit = 'todo.task'
+    #'res.users'为系统用户集
+    user_id = fields.Many2one('res.users', 'Responsible')
+    date_deadline = fields.Date('Deadline')
+
+
+
